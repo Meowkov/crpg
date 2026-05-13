@@ -624,25 +624,25 @@
     </ItemComponent>
     <Flags />
   </Item>
-  <Item id="crpg_ba_knightpadcape3_h0" name="Bahamut Plate Pauldrons with Cape" mesh="ba_knightpadcape3" culture="Culture.vlandia" weight="4.049947" appearance="1" Type="Cape" is_merchandise="true">
+  <Item id="crpg_ba_knightpadcape3_v2_h0" name="Bahamut Plate Pauldrons with Cape" mesh="ba_knightpadcape3" culture="Culture.vlandia" weight="4.049947" appearance="1" Type="Cape" is_merchandise="true">
     <ItemComponent>
       <Armor body_armor="19" modifier_group="plate" material_type="Plate" arm_armor="11" />
     </ItemComponent>
     <Flags UseTeamColor="true" />
   </Item>
-  <Item id="crpg_ba_knightpadcape3_h1" name="Bahamut Plate Pauldrons with Cape +1" mesh="ba_knightpadcape3" culture="Culture.vlandia" weight="4.049947" appearance="1" Type="Cape" is_merchandise="true">
+  <Item id="crpg_ba_knightpadcape3_v2_h1" name="Bahamut Plate Pauldrons with Cape +1" mesh="ba_knightpadcape3" culture="Culture.vlandia" weight="4.049947" appearance="1" Type="Cape" is_merchandise="true">
     <ItemComponent>
       <Armor body_armor="21" modifier_group="plate" material_type="Plate" arm_armor="11" />
     </ItemComponent>
     <Flags UseTeamColor="true" />
   </Item>
-  <Item id="crpg_ba_knightpadcape3_h2" name="Bahamut Plate Pauldrons with Cape +2" mesh="ba_knightpadcape3" culture="Culture.vlandia" weight="4.049947" appearance="1" Type="Cape" is_merchandise="true">
+  <Item id="crpg_ba_knightpadcape3_v2_h2" name="Bahamut Plate Pauldrons with Cape +2" mesh="ba_knightpadcape3" culture="Culture.vlandia" weight="4.049947" appearance="1" Type="Cape" is_merchandise="true">
     <ItemComponent>
       <Armor body_armor="22" modifier_group="plate" material_type="Plate" arm_armor="11" />
     </ItemComponent>
     <Flags UseTeamColor="true" />
   </Item>
-  <Item id="crpg_ba_knightpadcape3_h3" name="Bahamut Plate Pauldrons with Cape +3" mesh="ba_knightpadcape3" culture="Culture.vlandia" weight="4.049947" appearance="1" Type="Cape" is_merchandise="true">
+  <Item id="crpg_ba_knightpadcape3_v2_h3" name="Bahamut Plate Pauldrons with Cape +3" mesh="ba_knightpadcape3" culture="Culture.vlandia" weight="4.049947" appearance="1" Type="Cape" is_merchandise="true">
     <ItemComponent>
       <Armor body_armor="23" modifier_group="plate" material_type="Plate" arm_armor="12" />
     </ItemComponent>

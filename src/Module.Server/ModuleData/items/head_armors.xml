@@ -8136,25 +8136,25 @@
     </ItemComponent>
     <Flags />
   </Item>
-  <Item id="crpg_vlandia_crown_v2_h0" name="{=1b6T0M72}Austere Crown" mesh="vlandia_crown" culture="Culture.empire" weight="0.1285412" appearance="6" Type="HeadArmor" is_merchandise="false">
+  <Item id="crpg_vlandia_crown_v3_h0" name="{=1b6T0M72}Austere Crown" mesh="vlandia_crown" culture="Culture.empire" weight="0.1285412" appearance="6" Type="HeadArmor" is_merchandise="false">
     <ItemComponent>
       <Armor head_armor="4" has_gender_variations="false" hair_cover_type="none" modifier_group="plate" material_type="Plate" />
     </ItemComponent>
     <Flags UseTeamColor="false" Civilian="true" />
   </Item>
-  <Item id="crpg_vlandia_crown_v2_h1" name="{=1b6T0M72}Austere Crown +1" mesh="vlandia_crown" culture="Culture.empire" weight="0.1285412" appearance="6" Type="HeadArmor" is_merchandise="false">
+  <Item id="crpg_vlandia_crown_v3_h1" name="{=1b6T0M72}Austere Crown +1" mesh="vlandia_crown" culture="Culture.empire" weight="0.1285412" appearance="6" Type="HeadArmor" is_merchandise="false">
     <ItemComponent>
       <Armor head_armor="6" has_gender_variations="false" hair_cover_type="none" modifier_group="plate" material_type="Plate" />
     </ItemComponent>
     <Flags UseTeamColor="false" Civilian="true" />
   </Item>
-  <Item id="crpg_vlandia_crown_v2_h2" name="{=1b6T0M72}Austere Crown +2" mesh="vlandia_crown" culture="Culture.empire" weight="0.1285412" appearance="6" Type="HeadArmor" is_merchandise="false">
+  <Item id="crpg_vlandia_crown_v3_h2" name="{=1b6T0M72}Austere Crown +2" mesh="vlandia_crown" culture="Culture.empire" weight="0.1285412" appearance="6" Type="HeadArmor" is_merchandise="false">
     <ItemComponent>
       <Armor head_armor="8" has_gender_variations="false" hair_cover_type="none" modifier_group="plate" material_type="Plate" />
     </ItemComponent>
     <Flags UseTeamColor="false" Civilian="true" />
   </Item>
-  <Item id="crpg_vlandia_crown_v2_h3" name="{=1b6T0M72}Austere Crown +3" mesh="vlandia_crown" culture="Culture.empire" weight="0.1285412" appearance="6" Type="HeadArmor" is_merchandise="false">
+  <Item id="crpg_vlandia_crown_v3_h3" name="{=1b6T0M72}Austere Crown +3" mesh="vlandia_crown" culture="Culture.empire" weight="0.1285412" appearance="6" Type="HeadArmor" is_merchandise="false">
     <ItemComponent>
       <Armor head_armor="10" has_gender_variations="false" hair_cover_type="none" modifier_group="plate" material_type="Plate" />
     </ItemComponent>
