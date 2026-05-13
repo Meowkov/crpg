@@ -1,0 +1,126 @@
+name: Propagate item version changes to dtv
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'src/Module.Server/ModuleData/items/*.xml'
+
+jobs:
+  propagate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout (full depth for diff)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Detect _v version changes in items/
+        id: detect
+        run: |
+          python3 << 'PYEOF'
+          import subprocess, re, os, json
+
+          result = subprocess.run(
+              ["git", "diff", "HEAD~1", "HEAD", "--",
+               "src/Module.Server/ModuleData/items/"],
+              capture_output=True, text=True
+          )
+          diff = result.stdout
+
+          ID_PATTERN = re.compile(r'id="(crpg_[a-z0-9_]+?)_v(\d+)(_h\d+)"')
+
+          removed = {}
+          added   = {}
+
+          for line in diff.splitlines():
+              if line.startswith("---") or line.startswith("+++"):
+                  continue
+              m = ID_PATTERN.search(line)
+              if not m:
+                  continue
+              base, ver = m.group(1), int(m.group(2))
+              if line.startswith("-"):
+                  if base not in removed:
+                      removed[base] = ver
+              elif line.startswith("+"):
+                  if base not in added:
+                      added[base] = ver
+
+          changes = []
+          seen = set()
+
+          for base, old_v in removed.items():
+              new_v = added.get(base)
+              if new_v is not None and new_v != old_v and base not in seen:
+                  changes.append({"base": base, "old": old_v, "new": new_v})
+                  seen.add(base)
+
+          for base, new_v in added.items():
+              if base not in removed and base not in seen:
+                  changes.append({"base": base, "old": None, "new": new_v})
+                  seen.add(base)
+
+          if changes:
+              payload = json.dumps(changes)
+              print(f"Detected changes: {payload}")
+              with open(os.environ["GITHUB_OUTPUT"], "a") as fh:
+                  fh.write(f"changes={payload}\n")
+                  fh.write("has_changes=true\n")
+          else:
+              print("No _v version changes detected.")
+              with open(os.environ["GITHUB_OUTPUT"], "a") as fh:
+                  fh.write("has_changes=false\n")
+          PYEOF
+
+      - name: Apply version changes to dtv/ files
+        if: steps.detect.outputs.has_changes == 'true'
+        run: |
+          python3 << 'PYEOF'
+          import json, re, glob
+
+          changes = json.loads('''${{ steps.detect.outputs.changes }}''')
+          dtv_files = glob.glob("src/Module.Server/ModuleData/dtv/*.xml")
+
+          total_replacements = 0
+
+          for dtv_file in dtv_files:
+              with open(dtv_file, "r", encoding="utf-8") as f:
+                  content = f.read()
+              original = content
+
+              for change in changes:
+                  base  = change["base"]
+                  old_v = change["old"]
+                  new_v = change["new"]
+
+                  if old_v is None:
+                      pattern     = re.compile(rf'({re.escape(base)})(_h\d+)')
+                      replacement = rf'\g<1>_v{new_v}\g<2>'
+                  else:
+                      pattern     = re.compile(rf'({re.escape(base)})_v{old_v}(_h\d+)')
+                      replacement = rf'\g<1>_v{new_v}\g<2>'
+
+                  new_content, count = pattern.subn(replacement, content)
+                  if count:
+                      print(f"  [{dtv_file}] {base}: v{old_v} -> v{new_v} ({count} hits)")
+                      total_replacements += count
+                  content = new_content
+
+              if content != original:
+                  with open(dtv_file, "w", encoding="utf-8") as f:
+                      f.write(content)
+
+          print(f"\nTotal replacements: {total_replacements}")
+          PYEOF
+
+      - name: Commit propagated changes
+        if: steps.detect.outputs.has_changes == 'true'
+        uses: EndBug/add-and-commit@v9
+        with:
+          message: "chore: propagate item _v changes to dtv [skip ci]"
+          default_author: github_actions
+          add: "src/Module.Server/ModuleData/dtv/*.xml"
