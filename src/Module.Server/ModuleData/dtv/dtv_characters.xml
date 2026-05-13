@@ -1374,7 +1374,7 @@
         <equipment slot="Gloves" id="Item.crpg_padded_vambrace_v2_h0" />
         <equipment slot="Leg" id="Item.crpg_fine_town_boots_v2_h0" />
         <equipment slot="Item0" id="Item.crpg_short_arming_sword_v1_h0" />
-        <equipment slot="Item1" id="Item.crpg_bracketed_heater_shield_v4_h0" />
+        <equipment slot="Item1" id="Item.crpg_bracketed_heater_shield_v5_h0" />
       </EquipmentRoster>
       <EquipmentRoster>
         <equipment slot="Head" id="Item.crpg_segmented_cervelliere_over_mail_coif_v2_h0" />
@@ -1504,7 +1504,7 @@
         <equipment slot="Body" id="Item.crpg_coat_of_plates_over_mail_v3_h0" />
         <equipment slot="Gloves" id="Item.crpg_battania_noble_bracers_v3_h0" />
         <equipment slot="Leg" id="Item.crpg_fine_town_boots_v2_h0" />
-        <equipment slot="Item0" id="Item.crpg_burgundian_glaive_v6_h1" />
+        <equipment slot="Item0" id="Item.crpg_burgundian_glaive_v7_h1" />
       </EquipmentRoster>
     </Equipments>
   </NPCCharacter>
