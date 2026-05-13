@@ -1,7 +1,7 @@
 name: Propagate item version changes to dtv
 
 on:
-  push:
+  pull_request:
     branches: [master]
     paths:
       - 'src/Module.Server/ModuleData/items/*.xml'
@@ -13,10 +13,11 @@ jobs:
       contents: write
 
     steps:
-      - name: Checkout (full depth for diff)
-        uses: actions/checkout@v4
+      - name: Checkout PR branch
+        uses: actions/checkout@v5
         with:
-          fetch-depth: 2
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
 
       - name: Detect _v version changes in items/
         id: detect
@@ -25,7 +26,7 @@ jobs:
           import subprocess, re, os, json
 
           result = subprocess.run(
-              ["git", "diff", "HEAD~1", "HEAD", "--",
+              ["git", "diff", "origin/${{ github.base_ref }}...HEAD", "--",
                "src/Module.Server/ModuleData/items/"],
               capture_output=True, text=True
           )
@@ -117,9 +118,9 @@ jobs:
           print(f"\nTotal replacements: {total_replacements}")
           PYEOF
 
-      - name: Commit propagated changes
+      - name: Commit propagated changes to PR branch
         if: steps.detect.outputs.has_changes == 'true'
-        uses: EndBug/add-and-commit@v9
+        uses: EndBug/add-and-commit@v10
         with:
           message: "chore: propagate item _v changes to dtv [skip ci]"
           default_author: github_actions
