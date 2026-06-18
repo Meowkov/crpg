@@ -25,8 +25,8 @@
     <Flags Civilian="true" UseTeamColor="true" />
   </Item>
   <Item id="crpg_14_noblesabaton1_v2_h0" name="Brass Rimmed Plate Leggings" mesh="14_noblesabaton1" culture="Culture.neutral_culture" weight="2.60973" appearance="10" Type="LegArmor" difficulty="0">
-    <ItemComponent>
       <Armor leg_armor="30" covers_legs="true" modifier_group="plate" material_type="Plate" family_type="3" />
+    <ItemComponent>
     </ItemComponent>
     <Flags Civilian="true" UseTeamColor="true" />
   </Item>
@@ -48,25 +48,25 @@
     </ItemComponent>
     <Flags Civilian="true" UseTeamColor="true" />
   </Item>
-  <Item id="crpg_ba_plategreaves_h0" name="Bahamut Plate Boots" mesh="ba_plategreaves" culture="Culture.vlandia" weight="2.60973" appearance="1" Type="LegArmor" difficulty="0">
+  <Item id="crpg_ba_plategreaves_v1_h0" name="Bahamut Plate Boots" mesh="ba_plategreaves" culture="Culture.vlandia" weight="2.60973" appearance="1" Type="LegArmor" difficulty="0">
     <ItemComponent>
       <Armor leg_armor="30" covers_legs="true" modifier_group="plate" material_type="Plate" />
     </ItemComponent>
     <Flags />
   </Item>
-  <Item id="crpg_ba_plategreaves_h1" name="Bahamut Plate Boots +1" mesh="ba_plategreaves" culture="Culture.vlandia" weight="2.60973" appearance="1" Type="LegArmor" difficulty="0">
+  <Item id="crpg_ba_plategreaves_v1_h1" name="Bahamut Plate Boots +1" mesh="ba_plategreaves" culture="Culture.vlandia" weight="2.60973" appearance="1" Type="LegArmor" difficulty="0">
     <ItemComponent>
       <Armor leg_armor="31" covers_legs="true" modifier_group="plate" material_type="Plate" />
     </ItemComponent>
     <Flags />
   </Item>
-  <Item id="crpg_ba_plategreaves_h2" name="Bahamut Plate Boots +2" mesh="ba_plategreaves" culture="Culture.vlandia" weight="2.60973" appearance="1" Type="LegArmor" difficulty="0">
+  <Item id="crpg_ba_plategreaves_v1_h2" name="Bahamut Plate Boots +2" mesh="ba_plategreaves" culture="Culture.vlandia" weight="2.60973" appearance="1" Type="LegArmor" difficulty="0">
     <ItemComponent>
       <Armor leg_armor="33" covers_legs="true" modifier_group="plate" material_type="Plate" />
     </ItemComponent>
     <Flags />
   </Item>
-  <Item id="crpg_ba_plategreaves_h3" name="Bahamut Plate Boots +3" mesh="ba_plategreaves" culture="Culture.vlandia" weight="2.60973" appearance="1" Type="LegArmor" difficulty="0">
+  <Item id="crpg_ba_plategreaves_v1_h3" name="Bahamut Plate Boots +3" mesh="ba_plategreaves" culture="Culture.vlandia" weight="2.60973" appearance="1" Type="LegArmor" difficulty="0">
     <ItemComponent>
       <Armor leg_armor="35" covers_legs="true" modifier_group="plate" material_type="Plate" />
     </ItemComponent>

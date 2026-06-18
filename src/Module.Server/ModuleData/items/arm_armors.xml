@@ -24,25 +24,25 @@
     </ItemComponent>
     <Flags Civilian="true" />
   </Item>
-  <Item id="crpg_ba_plategauntlet_h0" name="Bahamut Plate Gauntlets" mesh="ba_plategauntlet" culture="Culture.vlandia" weight="3.401395" appearance="1" Type="HandArmor" difficulty="0" is_merchandise="true" subtype="body_armor">
+  <Item id="crpg_ba_plategauntlet_v1_h0" name="Bahamut Plate Gauntlets" mesh="ba_plategauntlet" culture="Culture.vlandia" weight="3.401395" appearance="1" Type="HandArmor" difficulty="0" is_merchandise="true" subtype="body_armor">
     <ItemComponent>
       <Armor arm_armor="29" modifier_group="Plate" material_type="Plate" covers_hands="true" body_armor="0" leg_armor="0" />
     </ItemComponent>
     <Flags UseTeamColor="false" />
   </Item>
-  <Item id="crpg_ba_plategauntlet_h1" name="Bahamut Plate Gauntlets +1" mesh="ba_plategauntlet" culture="Culture.vlandia" weight="3.401395" appearance="1" Type="HandArmor" difficulty="0" is_merchandise="true" subtype="body_armor">
+  <Item id="crpg_ba_plategauntlet_v1_h1" name="Bahamut Plate Gauntlets +1" mesh="ba_plategauntlet" culture="Culture.vlandia" weight="3.401395" appearance="1" Type="HandArmor" difficulty="0" is_merchandise="true" subtype="body_armor">
     <ItemComponent>
       <Armor arm_armor="30" modifier_group="Plate" material_type="Plate" covers_hands="true" body_armor="0" leg_armor="0" />
     </ItemComponent>
     <Flags UseTeamColor="false" />
   </Item>
-  <Item id="crpg_ba_plategauntlet_h2" name="Bahamut Plate Gauntlets +2" mesh="ba_plategauntlet" culture="Culture.vlandia" weight="3.401395" appearance="1" Type="HandArmor" difficulty="0" is_merchandise="true" subtype="body_armor">
+  <Item id="crpg_ba_plategauntlet_v1_h2" name="Bahamut Plate Gauntlets +2" mesh="ba_plategauntlet" culture="Culture.vlandia" weight="3.401395" appearance="1" Type="HandArmor" difficulty="0" is_merchandise="true" subtype="body_armor">
     <ItemComponent>
       <Armor arm_armor="31" modifier_group="Plate" material_type="Plate" covers_hands="true" body_armor="0" leg_armor="0" />
     </ItemComponent>
     <Flags UseTeamColor="false" />
   </Item>
-  <Item id="crpg_ba_plategauntlet_h3" name="Bahamut Plate Gauntlets +3" mesh="ba_plategauntlet" culture="Culture.vlandia" weight="3.401395" appearance="1" Type="HandArmor" difficulty="0" is_merchandise="true" subtype="body_armor">
+  <Item id="crpg_ba_plategauntlet_v1_h3" name="Bahamut Plate Gauntlets +3" mesh="ba_plategauntlet" culture="Culture.vlandia" weight="3.401395" appearance="1" Type="HandArmor" difficulty="0" is_merchandise="true" subtype="body_armor">
     <ItemComponent>
       <Armor arm_armor="33" modifier_group="Plate" material_type="Plate" covers_hands="true" body_armor="0" leg_armor="0" />
     </ItemComponent>
